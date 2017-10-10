@@ -25,7 +25,7 @@ import * as e433 from './definitions/433'
 import * as e434 from './definitions/434'
 import * as e435 from './definitions/435'
 
-const errors: {[id: number]: ErrorType} = {
+const Errors: {[id: number]: ErrorType} = {
   411: e411,
   412: e412,
   413: e413,
@@ -52,4 +52,4 @@ const errors: {[id: number]: ErrorType} = {
 };
 
 // TODO(scott): Bulk-rename all this to "annotation" instead of "error"
-export default errors;
+export default Errors;

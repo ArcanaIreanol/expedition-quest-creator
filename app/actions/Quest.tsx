@@ -10,7 +10,7 @@ import {
 import {setSnackbar} from './Snackbar'
 import {QuestType, UserState, ShareType} from '../reducers/StateTypes'
 
-import {setDialog, pushError, pushHTTPError} from './Dialogs'
+import {pushError, pushHTTPError} from './Dialogs'
 import {startPlaytestWorker} from './Editor'
 import {realtimeUtils} from '../Auth'
 import {

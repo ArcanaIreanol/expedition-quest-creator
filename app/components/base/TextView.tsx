@@ -178,7 +178,7 @@ export default class TextView extends React.Component<TextViewProps, {}> {
       return;
     }
 
-    const ICON_CLASSES = ['ace_error', 'ace_warning', 'ace_info']
+    const ICON_CLASSES = ['ace_error', 'ace_warning', 'ace_info'];
     let isIcon = false;
     for (const c of path[0].classList) {
       if (ICON_CLASSES.indexOf(c) !== -1) {
@@ -186,11 +186,11 @@ export default class TextView extends React.Component<TextViewProps, {}> {
         break;
       }
     }
-
     if (!isIcon) {
       return;
     }
-    const rowNum = parseInt(path[0].textContent, 10) - 1;
+
+    const rowNum = parseInt(event.domEvent.target.dataset.line, 10);
     const annotations: number[] = event.editor.session.getAnnotations().map((a: AceAnnotation) => {
       if (a.row !== rowNum) {
         return null;
